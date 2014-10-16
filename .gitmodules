@@ -1,0 +1,12 @@
+[submodule "src/haridashi"]
+	path = src/haridashi
+	url = ../haridashi/
+[submodule "src/ichimon"]
+	path = src/ichimon
+	url = ../ichimon/
+[submodule "src/yobidashi"]
+	path = src/yobidashi
+	url = ../yobidashi/
+[submodule "src/basho"]
+	path = src/basho
+	url = ../basho/
