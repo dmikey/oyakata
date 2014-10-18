@@ -10,3 +10,6 @@
 [submodule "src/basho"]
 	path = src/basho
 	url = ../basho/
+[submodule "src/sumoji"]
+	path = src/sumoji
+	url = ../sumoji/
