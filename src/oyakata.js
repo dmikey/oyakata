@@ -87,11 +87,16 @@ define(['basho/main', 'haridashi/main', 'ichimon/main', 'sumoji/main', 'yobidash
             while (_mixins.length > 0) {
 
                 var _mixin = _mixins.pop();
-                if (components[_mixin]) {
 
+                if (components[_mixin]) {
                     //load mixin from memory object
                     def = mixins.mix(def, components[_mixin]);
-                } else {
+                }
+				else if(typeof _mixin === 'object') {
+					//load mixin from passed object
+					def = mixins.mix(def, _mixin);
+				}
+				else {
                     //load modules dynamically from the app source if desired
                     requiredMixins.push(_mixin);
                     require(['./components/' + _mixin], function (_mixin_) {
